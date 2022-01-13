@@ -1,0 +1,115 @@
+/* ------------genre stylings--------- */
+
+.breadcrumb{
+    padding: 66px 0 0 60px;
+}
+.title h4{
+    display: inline;
+}
+#owl-demo3 .item{
+    margin: 40px 0px;
+    
+  }
+  #owl-demo3 .item .img{
+    display: block;
+    width: 90%;
+    height: auto;
+  }
+  #owl-demo3 .item .price{
+      font-family: 'Playfair Display';
+  }
+  #owl-demo3 .item .img{
+      position: relative;
+  }
+  .best-click{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -1px;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    
+}
+.item:hover .best-click{
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.5s;
+}
+#art-design .item .best-click a{
+    text-decoration: none;
+    font-size: 17px;
+    color: #ecae1a;
+    position: relative;
+    top: 90px;
+    display: block;
+    letter-spacing: 3px;
+    font-weight: 400;
+}
+
+.item .best-click a:hover{
+    color: #fff;
+    transition: all 0.3s ease;
+}
+.latest .author{
+    color: grey;
+    letter-spacing: 2px;
+}
+.latest .price{
+    color: rgb(70, 69, 69);
+    letter-spacing: 1px;
+}
+.item .btn{
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 0;
+}
+.view-all{
+    text-decoration: none;
+}
+#owl-demo4 .item{
+    margin: 40px 0px;
+    
+  }
+  #owl-demo4 .item .img{
+    display: block;
+    width: 90%;
+    height: auto;
+  }
+  #owl-demo4 .item .price{
+      font-family: 'Playfair Display';
+  }
+  #owl-demo4 .item .img{
+      position: relative;
+  }
+
+  #biography-memoir .item .best-click a{
+    text-decoration: none;
+    font-size: 17px;
+    color: #ecae1a;
+    position: relative;
+    top: 90px;
+    display: block;
+    letter-spacing: 3px;
+    font-weight: 400;
+  }
+
+
+  #owl-demo5 .item{
+    margin: 40px 0px;
+    
+  }
+  #owl-demo5 .item .img{
+    display: block;
+    width: 90%;
+    height: auto;
+  }
+  #owl-demo5 .item .price{
+      font-family: 'Playfair Display';
+  }
+  #owl-demo5 .item .img{
+      position: relative;
+  }

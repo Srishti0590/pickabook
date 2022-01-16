@@ -1,0 +1,9 @@
+#quotes{
+    padding: 98px;
+}
+/* .quotes{
+    padding-top: 98px;
+} */
+.quotes .form-control{
+    width: 200px;
+}

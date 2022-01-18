@@ -23,15 +23,15 @@
     margin-left: 18px;
     margin-bottom:26px ;
 }
-.book-title{
+/* .book-title{
     font-size: 28px;
     font-weight: 600;
-}
+} */
 .book-author{
     color: #8f8f8f;
     font-weight: 600;
     letter-spacing: 1.4px;
-    font-size: 22px;
+    
 }
 form{
     margin-left: 28px;
@@ -106,6 +106,35 @@ form{
     padding: 7px 54px;
     font-size: 15px;
 }
+
 .more-by .card{
     background-color: #fff;
+}
+textarea{
+    width: 100%;
+}
+.comments .img img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.user-details{
+    margin-left: -30px;
+}
+.user-details p{
+    font-size: 14px;
+}
+.user-details .username{
+    color: blue;
+}
+@media screen and (max-width:600px) {
+    .more-by{
+        padding: 150px;
+    }
+    .book-details .col-md-6{
+        text-align: center;
+    }
+    .book-title{
+         padding-top: 20px;
+    }
 }

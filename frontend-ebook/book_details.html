@@ -152,7 +152,7 @@
  <span class="arr">Go to top</span>
 </div>
 
-<nav aria-label="breadcrumb mx-5" class="breadcrumb" style="background-color: #fff;">
+<nav aria-label="breadcrumb mx-5" class="breadcrumb crumb" style="background-color: #fff;">
     <ol class="breadcrumb mx-5" style="background-color: #fff;">
       <li class="breadcrumb-item"><a href="homepage_login.html">Home</a></li>
       <li class="breadcrumb-item"><a href="genre.html">Genre</a></li>
@@ -194,13 +194,119 @@
                       Viele Desktop Publisher und Webeditoren nutzen mittlerweile Lorem Ipsum als den Standardtext, auch die</p>
 
             </div>
-            <div class="col-md-3">
-                <h5>$123</h5>
-                <p>Delivery to worldwide</p>
+            <div class="col-md-3 right-sec">
+                <h5 class="text-center my-4">Price: $123</h5>
+                <p>Download any book you want from any where.</p>
+                <a href="#" class="btn btn-dark download">Download</a><br>
+                <a href="#" class="btn btn-dark favorites">Add to Favorites</a>
 
             </div>
         </div>
     </div>
+</section>
+<section id="more" class="mt-5">
+  <div class="container more-by py-5">
+          <div class="title text-start">
+              <h4 class="fs-2 pt-4 pb-3">More by <span>Same Author</span></h4>
+          </div>
+          <div class="row ">
+            <div class="best-books col-md-3 col-sm-3">
+              <div class="card" style="width: 16rem; ">
+                <div class="img">
+                  <img src="images/book4.jpg" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body">
+                  <p class="card-title fw-bold fs-5">Book Name</p>
+                  <p class="card-text">authors name</p>
+                  
+                </div>
+                <div class="best-hover text-center">
+                  <a href="#" class="pb-3">View Details <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                  <a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                  <a href="#" class="py-3">Download </a>
+                </div>
+              </div>
+              
+            </div>
+    
+            <div class="best-books col-md-3">
+              <div class="card" style="width: 16rem;">
+                <div class="img">
+                  <img src="images/book4.jpg" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body">
+                  <p class="card-title fw-bold fs-5">Book Name</p>
+                  <p class="card-text">authors name</p>
+                  
+                </div>
+                <div class="best-hover text-center">
+                  <a href="#" class="pb-3">View Details <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                  <a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                  <a href="#" class="py-3">Download </a>
+                </div>
+              </div>
+              
+            </div>
+    
+            <div class="best-books col-md-3">
+              <div class="card" style="width: 16rem;">
+                <div class="img">
+                  <img src="images/book4.jpg" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body">
+                  <p class="card-title fw-bold fs-5">Book Name</p>
+                  <p class="card-text">authors name</p>
+                  
+                </div>
+                <div class="best-hover text-center">
+                  <a href="#" class="pb-3">View Details <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                  <a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                  <a href="#" class="py-3">Download </a>
+                </div>
+              </div>
+              
+            </div>
+            <div class="best-books col-md-3">
+              <div class="card" style="width: 16rem;">
+                <div class="img">
+                  <img src="images/book4.jpg" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body">
+                  <p class="card-title fw-bold fs-5">Book Name</p>
+                  <p class="card-text">authors name</p>
+                  
+                </div>
+                <div class="best-hover text-center">
+                  <a href="#" class="pb-3">View Details <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                  <a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                  <a href="#" class="py-3">Download </a>
+                </div>
+              </div>
+              
+            </div>
+        </div>
+       
+      </div>
+    </section>
+  </div>
+</section>
+
+<section id="review">
+  <div class="container reviews my-5">
+    <h4 class="fs-4 fw-bold">Review</h4>
+    <div class="comments d-flex">
+      <div class="img">
+        <img src="images/a1.jpg" alt="">
+      </div>
+      <div class="user-details">
+        <p>Username</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem quaerat veritatis repellat ab sint nisi quia consectetur porro doloremque, quo, nostrum totam consequatur? Sapiente debitis iure doloribus facere quas porro!</p>
+      </div>
+    </div>
+    <p class="fw-light">Enter your messsge here:</p>
+    <textarea name="message" id="message" cols="150" rows="4"></textarea>
+    <a href="#" class="btn btn-dark my-2">Submit</a>
+  </div>
 </section>
 
  
@@ -252,7 +358,8 @@ $(function() {
     <script>
   AOS.init();
 </script>
-<!-- for rating -->
+
+<!----------- for rating ------------>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>    
 </body>
 </html>

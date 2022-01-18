@@ -22,6 +22,29 @@
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+     <style>
+          @media all and (min-width: 992px) {
+      .dropdown-menu li{ position: relative; 	}
+      .nav-item .submenu{ 
+        display: none;
+        position: absolute;
+        left:100%; top:-7px;
+      }
+      .nav-item .submenu-left{ 
+        right:100%; left:auto;
+      }
+      .dropdown-menu > li:hover{ background-color: #f1f1f1 }
+      .dropdown-menu > li:hover > .submenu{ display: block; }
+    }	
+    /* ============ desktop view .end// ============ */
+
+    /* ============ small devices ============ */
+    @media (max-width: 991px) {
+      .dropdown-menu .dropdown-menu{
+          margin-left:0.7rem; margin-right:0.7rem; margin-bottom: .5rem;
+      }
+    }
+     </style>
   </head>
 
 
@@ -43,7 +66,7 @@
                 <li class="nav-item">
                     <a class="nav-link a" href="#">About Us</a>
                 </li>
-                <li class="nav-item dropdown">
+                <!-- <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle a" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Browse
                   </a>
@@ -53,6 +76,28 @@
                     <li><a class="dropdown-item" href="#">Lists</a></li>
                     <li><a class="dropdown-item" href="#">Explore</a></li>
                     <li><a class="dropdown-item" href="#">Genres</a></li>
+                  </ul>
+                </li> -->
+                <li class="nav-item dropdown" id="myDropdown">
+                  <a class="nav-link dropdown-toggle a" href="#" data-bs-toggle="dropdown">Browse</a>
+                  <ul class="dropdown-menu">
+                    <li> <a class="dropdown-item" href="#">Recommendation</a></li>
+                    <li> <a class="dropdown-item" href="#"> Genre &raquo; </a>
+                      <ul class="submenu dropdown-menu">
+                        <li><a class="dropdown-item" href="#">art and design</a></li>
+                        <li><a class="dropdown-item" href="#">Submenu item 2</a></li>
+                        <li><a class="dropdown-item" href="#">Submenu item 3</a>
+                          <!-- <ul class="submenu dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Multi level 1</a></li>
+                            <li><a class="dropdown-item" href="#">Multi level 2</a></li>
+                          </ul> -->
+                        </li>
+                        <li><a class="dropdown-item" href="#">Submenu item 4</a></li>
+                        <li><a class="dropdown-item" href="#">Submenu item 5</a></li>
+                      </ul>
+                    </li>
+                    <li><a class="dropdown-item" href="#">Explore</a></li>
+              
                   </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -65,6 +110,8 @@
                     <li><a class="dropdown-item" href="#">Quizzes</a></li>
                   </ul>
                 </li>
+               
+
                 <form class="d-flex search mt-1">
                   <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                   <button class="btn btn-outline-success" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>

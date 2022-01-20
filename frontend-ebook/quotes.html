@@ -167,7 +167,7 @@
                 <span>Aythurs name</span>
             </div>
             <div class="col-md-1">
-                <a href="#" class="btn btn-primary" id="change" onclick="changeColor()">Like <i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a>
+                <a href="#" class="btn btn-primary" id="change" onclick="changeColor()"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> Like </a>
             </div>
         </div>
         <hr>
@@ -181,7 +181,7 @@
                 <span>Aythurs name</span>
             </div>
             <div class="col-md-1">
-                <a href="#" class="btn btn-primary">Like <i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a>
+                <a href="#" class="btn btn-primary"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> Like </a>
             </div>
         </div>
         </div>
@@ -206,9 +206,11 @@
     x.style.backgroundColor="#178efd";
     x.style.borderColor="#178efd";
     x.style.fontWeight="500";
-    x.innerHTML="Liked";
-    // x.classList.add("fa");
-    // x.classList.add("fa-thumbs-o-up");
+    x.innerHTML="  Liked";
+    x.classList.add("fa");
+    x.classList.add("fa-thumbs-up");
+    x.style.padding="10px";
+    
   }
 
 </script>

@@ -7,3 +7,9 @@
 .quotes .form-control{
     width: 200px;
 }
+
+.quotes-content .btn:hover{
+    color: #fff;
+    background-color: #0d6efd;
+    border-color:#0d6efd ;
+}

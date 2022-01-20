@@ -150,7 +150,7 @@
 <section id="quotes">
     <div class="container quotes">
         <div class="title text-center">
-            <h4 class="fs-1 pb-3 pt-2">Popular <span>Quotes</span></h4>
+            <h4 class="fs-1 pb-2 pt-3">Popular <span>Quotes</span></h4>
             <form class="d-flex search justify-content-end mb-5">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
@@ -167,7 +167,7 @@
                 <span>Aythurs name</span>
             </div>
             <div class="col-md-1">
-                <a href="#" class="btn btn-primary">Like <i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a>
+                <a href="#" class="btn btn-primary" id="change" onclick="changeColor()">Like <i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a>
             </div>
         </div>
         <hr>
@@ -197,6 +197,20 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
   AOS.init();
+</script>
+
+<!-- to change like buttonon click -->
+<script>
+  function changeColor(){
+    var x = document.getElementById("change");
+    x.style.backgroundColor="#178efd";
+    x.style.borderColor="#178efd";
+    x.style.fontWeight="500";
+    x.innerHTML="Liked";
+    // x.classList.add("fa");
+    // x.classList.add("fa-thumbs-o-up");
+  }
+
 </script>
 </body>
 </html>

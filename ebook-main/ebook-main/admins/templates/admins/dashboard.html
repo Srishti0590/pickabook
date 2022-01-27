@@ -1,0 +1,155 @@
+{% extends 'layout-admin.html' %}
+{% load static %}
+{% block title %}
+<title>Admin-Dashboard</title>
+<!--<style>-->
+<!--    .container{-->
+<!--        position:absolute;-->
+<!--        right:0;-->
+<!--        top:100px;-->
+<!--        left:350px;-->
+<!--        width:600px;-->
+<!--        overflow:hidden;-->
+<!--   }-->
+
+<!--</style>-->
+{% endblock %}
+{% block main_content %}
+
+
+
+        <div class="content">
+            <div class="dashboard-title d-flex justify-content-between">
+                <h2 class="mt-4 ms-4 fs-3">Dashboard</h2>
+                <nav aria-label="breadcrumb" class="mt-4 me-4">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+                  </ol>
+                </nav>
+            </div>
+            <div class="cards">
+                <div class="card-box" style="background-color:#17a2b8;">
+                    <div class="box">
+                         <a href="/admins/users">
+                        <h1 class="card-title ">{{category}}</h1>
+                         </a>
+                        <h3> Genres</h3>
+                    </div>
+                    <div class="icon">
+                        <i class="fa fa-list-alt" aria-hidden="true" style="font-size:70px;"></i>
+                    </div>
+                </div>
+                <div class="card-box bg-success">
+                    <div class="box">
+                         <a href="/admins/users">
+                        <h1 class="card-title ">{{books}}</h1>
+                         </a>
+                        <h3> Books</h3>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                </div>
+                <div class="card-box bg-warning">
+                    <div class="box">
+                         <a href="/admins/users">
+                        <h1 class="card-title ">{{quote}}</h1>
+                         </a>
+                        <h3> Quotes</h3>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-edit"></i>
+                    </div>
+                </div>
+                <div class="card-box bg-danger">
+                    <div class="box">
+                         <a href="/admins/users">
+                        <h1 class="card-title ">{{user}}</h1>
+                         </a>
+                        <h3> Users</h3>
+                    </div>
+                    <div class="icon">
+                        <i class="fa fa-users" aria-hidden="true"></i>
+                    </div>
+                </div>
+                 <div class="card-box bg-secondary">
+                    <div class="box">
+                         <a href="/admins/users">
+                        <h1 class="card-title">{{admin}}</h1>
+                         </a>
+                        <h3> Admin</h3>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-users-cog"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="content2">
+
+            </div>
+        </div>
+<!--<div class="container">-->
+<!--    <h1 style="text-align:center" class="">Admin Dashboard</h1> <br>-->
+<!--    {% include 'messages.html' %}-->
+<!--    <div class="row">-->
+<!--        <div class="col-md-3">-->
+<!--            <div class="card text-white bg-dark mb-3" style="max-width: 20rem;">-->
+<!--                <div class="card-header text-center">Total Books</div>-->
+<!--                <div class="card-body bg-secondary">-->
+<!--                    <a href="/pickbook/get_books">-->
+<!--                        <h1 class="card-title text-center">{{books}}</h1></a>-->
+
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="col-md-3">-->
+<!--            <div class="card text-white bg-dark mb-3" style="max-width: 20rem;">-->
+<!--                <div class="card-header text-center">Total Genres</div>-->
+<!--                <div class="card-body bg-secondary">-->
+<!--                    <a href="/pickabook/get_category"><h1 class="card-title text-center">{{category}}</h1>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        <div class="col-md-3">-->
+<!--            <div class="card text-white bg-dark mb-3" style="max-width: 20rem;">-->
+<!--                <div class="card-header text-center">Total Quotes</div>-->
+<!--                <div class="card-body bg-secondary">-->
+<!--                    <a href="/pickabook/get_quote"><h1 class="card-title text-center">{{quote}}</h1>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+
+
+<!--    </div>-->
+
+<!--    <div class="row">-->
+<!--        <div class="col">-->
+<!--            <div class="card text-white bg-dark mb-3" style="max-width: 20rem;">-->
+<!--                <div class="card-header text-center">Total Users</div>-->
+<!--                <div class="card-body bg-secondary">-->
+<!--                    <a href="/admins/users"><h1 class="card-title text-center">{{user}}</h1></a>-->
+<!--                </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        <div class="col">-->
+<!--            <div class="card text-white mb-3" style="max-width: 20rem;">-->
+<!--                <div class="card-header text-center bg-dark">Total Admins</div>-->
+<!--                <div class="card-body bg-secondary">-->
+<!--                    <a href="/admins/admins"> <h1 class="card-title text-center">{{admin}}</h1>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        </div>-->
+
+
+
+
+
+
+{% endblock %}

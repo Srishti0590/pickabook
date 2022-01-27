@@ -1,0 +1,60 @@
+{% extends 'layout-admin.html' %}
+{% load bootstrap %}
+{% block title %}
+    <title>Add New Book</title>
+<style>
+     button.btn-primary:hover{
+        border:1px solid blue;
+        background:white;
+        color:blue;
+        transition:all 0.2s ease;
+    }
+    .form{
+    padding:15px 0 15px 50px;
+}
+.form-group .control-label{
+    width:100%;
+}
+input.form-control{
+    width:100%;
+}
+.control-label{
+    font-weight:600;
+}
+.card{
+
+}
+</style>
+{% endblock%}
+
+{% block main_content %}
+
+<div class="container">
+<div class="row mt-5">
+
+    <div class="col-md-6 offset-md-3 mt-5">
+
+          {% include 'messages.html'%}
+        <div class="card mt-4">
+            <h1 class="text-center fs-5 fw-bold bg-primary text-center text-light py-3">Add New Book</h1>
+        <form class="form" action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form_book | bootstrap_horizontal }}
+            <button type="submit" class="btn btn-primary mt-3">Submit</button>
+        </form>
+    </div>
+    </div>
+</div>
+</div>
+<script>
+    var form_fields = document.getElementsByTagName('input')
+    form_fields[1].placeholder = "Enter Title"
+    form_fields[2].placeholder = "Enter description"
+
+
+   for(field in form_fields){
+   form_fields[field].className += ' my-3'
+   }
+</script>
+
+{% endblock %}

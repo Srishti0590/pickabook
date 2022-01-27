@@ -1,0 +1,289 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block title %}
+
+<title>Book</title>
+{% endblock title %}
+
+{% block main_content %}
+
+
+{% include 'messages.html' %}
+{% for i in book  %}
+<section id="top">
+  <div class="row">
+  <div class="menu">
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid bg-light">
+            <a class="navbar-brand col-md-2 ms-5" href="homepage.html"><img src="images/logo.JPG" width="59px" alt=""></a>
+            <button class="navbar-toggler bg-light navbar-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse col-md-7 bg-light" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active a" aria-current="page" href="homepage.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link a" href="#">My Books</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle a" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Browse
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Recommendation</a></li>
+                    <li><a class="dropdown-item" href="#">Choice Awards</a></li>
+                    <li><a class="dropdown-item" href="#">Lists</a></li>
+                    <li><a class="dropdown-item" href="#">Explore</a></li>
+                    <li><a class="dropdown-item" href="#">Genres</a></li>
+                  </ul>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Recommendation</a></li>
+                    <li><a class="dropdown-item" href="#">Choice Awards</a></li>
+                    <li><a class="dropdown-item" href="#">Lishhhhhhs</a></li>
+                    <li><a class="dropdown-item" href="#">Explore</a></li>
+                    <li><a class="dropdown-item" href="#">Genres</a></li>
+                  </ul>
+
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle a" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Community
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Quotes</a></li>
+                    <li><a class="dropdown-item" href="#">Creative Writing</a></li>
+                    <li><a class="dropdown-item" href="#">Quizzes</a></li>
+                  </ul>
+                </li>
+                <form class="d-flex search mt-1">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                </form>
+
+                </ul>
+
+            </div>
+            <div class="collapse navbar-collapse log" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-lg-0 ms">
+               <li class="nav-item ">
+                <a class="btn nav-link a mt-2 position-relative">
+                  <i class="fa fa-heart-o" aria-hidden="true"></i>
+                  <span class="position-absolute top-0 mt-3 start-100 ms-1 translate-middle badge rounded-pill bg-danger">
+                    0
+                  </span>
+                </a>
+
+                </li>
+
+                 <li class="nav-item">
+                    <a class="nav-link mt-2 a position-relative" href="#"><i class="fa fa-bell-o" aria-hidden="true"></i>
+                      <span class="position-absolute top-0 mt-3 start-100 translate-middle badge rounded-pill bg-danger">
+                        0
+                      </span>
+                    </a>
+                </li>
+                <!-- <li class="nav-item ms-3 dropdown">
+                  <div class="action">
+                      <div class="profile dropdown-toggle" onclick="menuToggle();">
+                          <img src="images/art.jpg" alt=""/>
+                      </div>
+                      <div class="menu">
+                          <h3>Ritika</h3>
+                          <ul class="">
+                              <li><i class="far fa-user"></i><a href="/my_profile">My Profile</a></li>
+                              <li><i class="far fa-user-edit"></i><a href="/edit_profile">Edit Profile</a></li>
+                              <li><i class="far fa-key"></i><a href="/password_change">Change Password</a></li>
+                              <li><i class="far fa-shopping-bag"></i><a href="/kitchen/my_order">My Order</a></li>
+                              <li><i class="far fa-question-circle"></i><a href="/kitchen/contact">Support</a></li>
+                              <li><i class="fas fa-sign-out-alt"></i><a href="/logout">Logout</a></li>
+                          </ul>
+                      </div>
+                  </div>
+              </li> -->
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="images/t2.png" alt="" class="rounded-circle" style="width: 48px; height: 48px;">
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">My Profile</a></li>
+                  <li><a class="dropdown-item" href="#">Settings</a></li>
+                  <li><a class="dropdown-item" href="#">Sign out</a></li>
+                </ul>
+              </li>
+
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</div>
+</div>
+</section>
+
+<div class="arrow">
+  <a href=""><i class="fa fa-angle-up text-light" aria-hidden="true"></i></a>
+ <span class="arr">Go to top</span>
+</div>
+
+<nav aria-label="breadcrumb mx-5" class="breadcrumb crumb" style="background-color: #fff;">
+    <ol class="breadcrumb mx-5" style="background-color: #fff;">
+      <li class="breadcrumb-item"><a href="homepage_login.html">Home</a></li>
+      <li class="breadcrumb-item"><a href="genre.html">Genre</a></li>
+      <li class="breadcrumb-item active" aria-current="page">book ko nam</li>
+    </ol>
+  </nav>
+
+<section id="book-detail">
+    <div class="container book-details">
+        <div class="row justify-content-center">
+            <div class="col-md-3 col-sm-6">
+                <img src="images/book1.jpg" alt="" width="260px" height="400px">
+            </div>
+            <div class="col-md-6">
+                <h3 class="book-title fs-2 fw-bold">Book Name</h3>
+                <h4 class="book-author fs-5">by  <span>Author name</span> </h4>
+                <form id="rating-form">
+                    <span class="rating-star">
+                    <input type="radio" name="rating" value="5"><span class="star"></span>
+
+                        <input type="radio" name="rating" value="4"><span class="star"></span>
+
+                        <input type="radio" name="rating" value="3"><span class="star"></span>
+
+                        <input type="radio" name="rating" value="2"><span class="star"></span>
+
+                        <input type="radio" name="rating" value="1"><span class="star"></span>
+                    </span>
+                    <span id="selected-rating" class="selected-rating" >0</span>
+                    </form>
+                    <hr>
+
+                    <p class="sypnosis">Sypnosis</p>
+                    <p class="addReadMore showlesscontent">Es ist Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos deleniti laborum autem dolores amet sunt, consequuntur ut explicabo optio repudiandae rem, fugit quaerat dolore odio? Ducimus sint quasi nulla itaque. ein lang erwiesener Fakt, dass ein Leser vom Text abgelenkt wird, wenn er sich ein Layout ansieht. Der Punkt,
+                    Lorem Ipsum zu nutzen, ist, dass es mehr oder weniger die normale Anordnung von Buchstaben darstellt und somit nach lesbarer Sprache aussieht.
+                    Viele Desktop Publisher und Webeditoren nutzen mittlerweile Lorem Ipsum als den Standardtext, auch die Suche im Internet nach "lorem ipsum" macht viele
+                     Webseiten sichtbar, wo diese noch immer vorkommen. Mittlerweile gibt es mehrere Versionen des Lorem Ipsum, einige zufällig, andere bewusst (beeinflusst von Witz und des eigenen Geschmacks)Es
+                      ist ein lang erwiesener Fakt, dass ein Leser vom Text abgelenkt wird, wenn er sich ein Layout ansieht. Der Punkt, Lorem Ipsum zu nutzen, ist, dass es mehr oder weniger die normale Anordnung von Buchstaben darstellt und somit nach lesbarer Sprache aussieht.
+                      Viele Desktop Publisher und Webeditoren nutzen mittlerweile Lorem Ipsum als den Standardtext, auch die</p>
+
+            </div>
+            <div class="col-md-3 right-sec">
+                <h5 class="text-center my-4">Price: $123</h5>
+                <p>Download any book you want from any where.</p>
+                <a href="#" class="btn btn-dark download">Download</a><br>
+                <a href="#" class="btn btn-dark favorites">Add to Favorites</a>
+
+            </div>
+        </div>
+    </div>
+</section>
+<section id="more" class="mt-5">
+  <div class="container more-by py-5">
+          <div class="title text-start">
+              <h4 class="fs-2 pt-4 pb-3">More by <span>Same Author</span></h4>
+          </div>
+          <div class="row ">
+            <div class="best-books col-md-3 col-sm-6">
+              <div class="card" style="width: 16rem; ">
+                <div class="img">
+                  <img src="images/book4.jpg" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body">
+                  <p class="card-title fw-bold fs-5">Book Name</p>
+                  <p class="card-text">authors name</p>
+
+                </div>
+                <div class="best-hover text-center">
+                  <a href="#" class="pb-3">View Details <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                  <a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                  <a href="#" class="py-3">Download </a>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="best-books col-md-3">
+              <div class="card" style="width: 16rem;">
+                <div class="img">
+                  <img src="images/book4.jpg" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body">
+                  <p class="card-title fw-bold fs-5">Book Name</p>
+                  <p class="card-text">authors name</p>
+
+                </div>
+                <div class="best-hover text-center">
+                  <a href="#" class="pb-3">View Details <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                  <a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                  <a href="#" class="py-3">Download </a>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="best-books col-md-3">
+              <div class="card" style="width: 16rem;">
+                <div class="img">
+                  <img src="images/book4.jpg" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body">
+                  <p class="card-title fw-bold fs-5">Book Name</p>
+                  <p class="card-text">authors name</p>
+
+                </div>
+                <div class="best-hover text-center">
+                  <a href="#" class="pb-3">View Details <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                  <a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                  <a href="#" class="py-3">Download </a>
+                </div>
+              </div>
+
+            </div>
+            <div class="best-books col-md-3">
+              <div class="card" style="width: 16rem;">
+                <div class="img">
+                  <img src="images/book4.jpg" class="card-img-top" alt="...">
+                </div>
+                <div class="card-body">
+                  <p class="card-title fw-bold fs-5">Book Name</p>
+                  <p class="card-text">authors name</p>
+
+                </div>
+                <div class="best-hover text-center">
+                  <a href="#" class="pb-3">View Details <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                  <a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                  <a href="#" class="py-3">Download </a>
+                </div>
+              </div>
+
+            </div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+</section>
+
+<section id="review">
+  <div class="container reviews my-5">
+    <h4 class="fs-4 fw-bold pb-2">Review</h4>
+    <div class="comments row d-flex">
+      <div class="img col-md-1">
+        <img src="images/a1.jpg" alt="">
+      </div>
+      <div class="user-details col-md-5">
+        <p class="username fw-bold">Username nn</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem quaerat veritatis repellat ab sint nisi quia consectetur porro doloremque, quo, nostrum totam consequatur? Sapiente debitis iure doloribus facere quas porro!</p>
+      </div>
+    </div>
+    <p class="fw-light">Enter your messsge here:</p>
+    <textarea name="message" id="message" cols="10" rows="4"></textarea>
+    <a href="#" class="btn btn-dark my-2">Submit</a>
+  </div>
+</section>
+ {% endfor %}
+
+{% endblock main_content %}

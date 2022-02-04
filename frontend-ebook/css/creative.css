@@ -1,0 +1,9 @@
+.creative-container{
+    padding: 95px 250px;
+}
+.fontSize{
+    color: blue;
+}
+.creative-container span{
+    font-size: 14px;
+}

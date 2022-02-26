@@ -1,0 +1,70 @@
+{% extends 'layout.html' %}
+{% load bootstrap %}
+{% block title %}
+<title>Profile</title>
+<style>
+    .breadcrumb{
+        margin:0;
+    }
+</style>
+{% endblock%}
+{% block main_content %}
+
+    <nav aria-label="breadcrumb" class="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/homepage">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Profile</li>
+  </ol>
+</nav>
+<div class="container" >
+    <h1 style="text-align:center; margin-top:-20px;" class="mb-5 fw-bold">My <span style="color:orange;">Profile</span></h1>
+    {% include 'messages.html' %}
+    <div class="card shadow" style="width:70%; margin:0 auto; padding:0px;">
+    <div class="row">
+            <div class="col-md-5">
+                    <img src="/{{request.user.profile.profile_pic}}" width="300" class="img-fluid">
+                </div>
+
+            <div class="col-md-6 py-3">
+                <p class="mb-2 fs-4 fw-bold">Current Details</p>
+                <div class="py-1"><p >Firstname : {{request.user.profile.firstname}}</p></div>
+                <div class="py-21"><p>Lastname : {{request.user.profile.lastname}}</p></div>
+                    <div class="py-1"><p>Phone : {{request.user.profile.phone}}</p></div>
+                 <div class="py-1"><p>Email : {{request.user.profile.email}}</p></div>
+                 <div class="py-2"><a href="#" class="btn btn-primary">Update</a></div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+        <div class="row justify-content-center">
+            <div class="col-md-8 mt-5">
+                <h1 class="text-center fw-bold mt-5">Update Details</h1>
+                <div class="card py-2 px-2 m-5">
+                    <form class="form myForm" action="" method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {{ form | bootstrap_horizontal}}
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+</div>
+
+
+<script>
+    var form_fields = document.getElementsByTagName('input')
+    form_fields[1].placeholder = 'Enter first name';
+    form_fields[2].placeholder = 'Enter last name';
+    form_fields[3].placeholder = 'Enter phone number';
+    for (var field in form_fields){
+    field.className += ' my-2'
+    }
+</script>
+
+{% endblock %}

@@ -1,0 +1,64 @@
+{% extends 'layout-admin.html' %}
+{% block title %}
+<title>All Quotes</title>
+
+   <style>
+    a.btn-primary:hover{
+        border:1px solid blue;
+        background:white;
+        color:blue;
+        transition:all 0.2s ease;
+    }
+
+    a.btn-danger:hover{
+        border:1px solid red;
+        background:white;
+        color:red;
+        transition:all 0.2s ease;
+    }
+</style>
+{% endblock%}
+
+{% block main_content %}
+<div class="container">
+    <div class="row mt-5">
+
+        <div class="col-md-10 offset-md-1 mt-5">
+            {% include 'messages.html' %}
+
+
+            <div class="card px-4">
+                    <div class="header-title d-flex py-2">
+            <h1 class="text-center fs-4 fw-bold my-3">All Quotes</h1>
+
+            <a class="btn btn-primary my-3 py-2 btn-sm ms-auto"
+                href="/pickabook/quotes_form"
+                >Add New Quotes</a>
+                </div>
+                <table class="table table-hover table-bordered">
+                    <tr>
+                        <th class="col-md-7">Quote Description</th>
+                        <th class="col-md-2">Authors</th>
+                        <th class="col-md-2">Date</th>
+                        <th class="col-md-1">Actions</th>
+                    </tr>
+                    {% for i in quotes %}
+                    <tr>
+                        <td> {{ i.quote_description }}</td>
+                        <td> {{ i.quote_author }}</td>
+                        <td> {{ i.created_date }}</td>
+                        <td><a class="btn btn-primary btn-sm my-1" href="/pickabook/update_quote/{{i.id}}">Edit</a> &nbsp;
+                            <a class="btn btn-danger btn-sm my-1"
+                               href="/pickabook/delete_quote/{{i.id}}"
+                               onclick="return confirm('Are you sure want to delete this category?')" >Delete</a></td>
+
+                    </tr>
+                    {% endfor %}
+
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

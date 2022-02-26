@@ -1,0 +1,164 @@
+/* --------------homepage_after login stylings -----------*/
+
+h1, h3, h4, h5, h6{
+    font-family: 'Cormorant Garamond', serif;
+}
+.banner-home{
+    background: url(../images/self-help.jpeg) fixed no-repeat;
+    background-size: contain;
+    height: 55vh;
+}
+@media screen and (max-width:600px) {
+    .banner-home{
+        display: none;
+    }
+    #recommendation{
+        padding: 80px;
+    }
+}
+#recommendation{
+    background-color: #f8f8f8;
+}
+.card{
+    border: none;
+    background-color: #f8f8f8;
+}
+.best-books .card .img{
+    position: relative;
+}
+.card-body{
+    padding-left: 0;
+    padding-right: 0;
+    margin-right: 0;
+}
+.best-hover{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -1px;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    height: 355px;
+    
+}
+.card:hover .best-hover{
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.5s;
+}
+.card .best-hover a{
+    text-decoration: none;
+    font-size: 17px;
+    color: #ecae1a;
+    position: relative;
+    top: 110px;
+    display: block;
+    letter-spacing: 3px;
+    font-weight: 400;
+}
+
+.card .best-hover a:hover{
+    color: #fff;
+    transition: all 0.3s ease;
+}
+.view-all a{
+    text-decoration: none;
+}
+.title h4{
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: bold;
+}
+.title span{
+    color: #ecae1a;
+}
+/* -------choose books stylomg------ */
+.choose-books-container{
+    background: url(../images/choosebooks.jpg)  no-repeat;
+    background-size: cover;
+    height: 45vh;
+}
+.choose-books-container .choose-books-content h1{
+    color: #fff;
+    font-size: 58px;
+    margin-top: 20px;
+}
+.choose-books-container .choose-books-content .btn{
+    background-color: #fff;
+    color: #000;
+    font-weight: 600;
+    padding: 10px 22px ;
+}
+.choose-books-container .choose-books-content .btn:hover{
+    color: #ecae1a;
+    border: 1px solid #ecae1a;
+}
+/* --------new deals styling -----------*/
+#new-deals{
+    padding: 60px 0;
+    background-color:#f8f8f8;
+}
+
+#owl-demo2 .item{
+    margin: 40px 0px;
+    
+  }
+  #owl-demo2 .item .img{
+    display: block;
+    width: 90%;
+    height: auto;
+  }
+  #owl-demo2 .item .price{
+      font-family: 'Playfair Display';
+  }
+  #owl-demo2 .item .img{
+      position: relative;
+  }
+  .best-click{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -1px;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    
+}
+.item:hover .best-click{
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.5s;
+}
+.item .best-click a{
+    text-decoration: none;
+    font-size: 17px;
+    color: #ecae1a;
+    position: relative;
+    top: 130px;
+
+    letter-spacing: 3px;
+    font-weight: 400;
+}
+
+.item .best-click a:hover{
+    color: #fff;
+    transition: all 0.3s ease;
+}
+.latest .author{
+    color: grey;
+    letter-spacing: 2px;
+}
+.latest .price{
+    color: rgb(70, 69, 69);
+    letter-spacing: 1px;
+}
+.item .btn{
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 0;
+}

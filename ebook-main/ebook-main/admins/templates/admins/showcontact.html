@@ -1,0 +1,41 @@
+{% extends 'layout-admin.html' %}
+{% block title %}
+<title>Contact Form</title>
+{% endblock title %}
+{% block main_content %}
+<div class="container-fluid" style="min-height:300px;">
+    <div class="row">
+        <div class="col mt-4 mb-4">
+            <h1 class="text-center text-uppercase m-4 font-weight-bold">All Contact Form Messages</h1>
+            {% include 'messages.html' %}
+            <div class="card shadow-lg ">
+                <div class="card-body">
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Phone</th>
+                            <th>Email</th>
+                            <th>Topic</th>
+                            <th>Messages</th>
+                        </tr>
+                        </thead>
+                        <tbody class="align-items-center">
+                        {% for contact in contact %}
+                        <tr>
+                            <td>{{contact.username}}</td>
+                            <td>{{contact.phone}}</td>
+                            <td>{{contact.email}}</td>
+                            <td>{{contact.topic}}</td>
+                            <td>{{contact.messages}}</td>
+                        </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}

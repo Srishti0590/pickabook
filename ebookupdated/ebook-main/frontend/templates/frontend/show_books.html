@@ -1,0 +1,110 @@
+<style>
+.image_zoom{
+transition: transform .2s;
+padding:10px;
+}
+.image_zoom:hover{
+transform: scale(1.3);
+overflow:hidden;
+}
+
+.card-top{
+overflow:hidden;
+}
+
+</style>
+
+{% extends 'layout.html' %}
+{% load static %}
+{% block title %}
+
+<title>News</title>
+{% endblock title %}
+
+{% block main_content %}
+<div class="arrow">
+  <a href=""><i class="fa fa-angle-up text-light" aria-hidden="true"></i></a>
+ <span class="arr">Go to top</span>
+</div>
+
+        {% include 'messages.html' %}
+        {% for i in category.books_set.all  %}
+<nav aria-label="breadcrumb mx-5" class="breadcrumb">
+    <ol class="breadcrumb mx-5">
+      <li class="breadcrumb-item"><a href="homepage_login.html">Home</a></li>
+      <li class="breadcrumb-item"><a href="genre.html">Genre</a></li>
+      <li class="breadcrumb-item active" aria-current="page">{{i.category.category_name}}</li>
+    </ol>
+  </nav>
+
+
+<!--<div class="container">-->
+<!--    <div class="row justify-content-around shadow-lg">-->
+
+<!--        <div class="card col-md-8 m-2 card-top">-->
+<!--            <div class="card-body">-->
+<!--                <h2 class="card-title">{{i.book_title}}</h2>-->
+<!--                <div class="" style="overflow:hidden;">-->
+<!--                    <img src="/{{i.book_image}}" class="card-img-top image_zoom" alt="..." >-->
+<!--                </div>-->
+<!--&lt;!&ndash;                <h5 class="card-text">{{i.news_description}}</h5>&ndash;&gt;-->
+<!--                 <p class="card-text">{{i.category.category_name}}</p>-->
+<!--                <a href="/news/add_to_favourite/{{i.id}}" class="btn btn-primary"-->
+<!--                    onclick="return confirm('Are you sure want to add this item to favourites?')">Add to Favourites</a>-->
+<!--            </div>-->
+
+
+<!--        </div>-->
+        <section id="recommendation" class="allbooks">
+  <div class="container py-3 ">
+      <div class="title text-center">
+          <h4 class="fs-1 pb-5"> <span>{{i.category.category_name}}</span></h4>
+      </div>
+      <div class="row ">
+        <div class="best-books col-md-3 col-sm-3">
+          <div class="card" style="width: 16rem; ">
+            <div class="img">
+              <img src="images/book4.jpg" class="card-img-top" alt="...">
+            </div>
+            <div class="card-body">
+              <p class="card-title fw-bold fs-5">{{i.book_title}}</p>
+              <p class="card-text">authors name</p>
+
+            </div>
+            <div class="best-hover text-center">
+              <a href="/pickabook/book/{{i.id}}" class="pb-3 {{activate_book_detail}}">View Details <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+              <a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+              <a href="#" class="py-3">Download </a>
+            </div>
+          </div>
+
+        </div>
+
+    </div>
+    <nav aria-label="Page navigation example" class="py-4">
+      <ul class="pagination justify-content-end me-5">
+        <li class="page-item">
+          <a class="page-link" href="#" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+  </div>
+</section>
+
+        {% endfor %}
+
+<!--    </div>-->
+<!--</div>-->
+
+{% endblock main_content %}

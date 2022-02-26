@@ -1,0 +1,47 @@
+{% extends 'layout-admin.html' %}
+{% block title %}
+<title>News & Interviews</title>
+{% endblock%}
+
+{% block main_content %}
+<div class="container">
+    <div class="row mt-5">
+
+        <div class="col-md-10 offset-md-1 mt-5">
+            <h1 class="text-center">News and Interviews</h1>
+            {% include 'messages.html' %}
+            <div class="card py-2 px-2">
+                <a class="btn btn-primary my-3 py-2 btn-sm ms-auto"
+                href="/pickabook/news_form"
+                >Add News</a>
+                <table class="table table-hover table-bordered">
+                    <tr>
+                        <th>News Title</th>
+                        <th>Image</th>
+                        <th>Video</th>
+                        <th>description</th>
+                        <th>Date</th>
+                        <th>Actions</th>
+                    </tr>
+                    {% for i in news %}
+                    <tr>
+                        <td> {{ i.title }}</td>
+                        <td> <img src="/{{i.image}}" width="200"> </td>
+                        <td> {{ i.video }}</td>
+                        <td> {{ i.description }}</td>
+                        <td> {{ i.created_date }}</td>
+                        <td><a class="btn btn-primary mb-2 btn-sm" href="/news/update_news/{{i.id}}">Edit</a> &nbsp;
+                            <a class="btn btn-danger mb-2 btn-sm"
+                               href="/news/delete_news/{{i.id}}"
+                               onclick="return confirm('Are you sure want to delete this news?')" >Delete</a></td>
+
+                    </tr>
+                    {% endfor %}
+
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

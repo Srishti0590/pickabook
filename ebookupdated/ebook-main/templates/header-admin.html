@@ -1,0 +1,160 @@
+<!--<a class="btn btn-primary m-2" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">-->
+<!--  Menu-->
+<!--</a>-->
+
+<!--<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">-->
+<!--  <div class="offcanvas-header">-->
+<!--    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Admin Dashboard</h5>-->
+<!--    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>-->
+<!--  </div>-->
+<!--  <div class="offcanvas-body">-->
+<!--    <ul class="list-unstyled">-->
+<!--     <li><a class="dropdown-item" href="/admins/dashboard">Admin Dashboard</a></li>-->
+<!--        <li><a class="dropdown-item {{activate_category}} " href="/pickabook/get_category">Genres</a></li>-->
+<!--        <li><a class="dropdown-item{{activate_book}} " href="/pickabook/get_books">Books</a></li>-->
+<!--        <li><a class="dropdown-item{{activate_book}}" href="/pickabook/get_book">My Books</a></li>-->
+<!--        <li><a class="dropdown-item {{activate_article}} " href="/news/get_article">Quizes</a></li>-->
+<!--        <li><a class="dropdown-item{{activate_covid}} " href="/pickabook/get_quote">Quotes</a></li>-->
+<!--         <li><a class="dropdown-item" href="/admins/users">Users</a></li>-->
+<!--         <li><a class="dropdown-item" href="/admins/admins">Admins</a></li>-->
+<!--        <li><a class="dropdown-item" href="/password_change">Settings</a></li>-->
+<!--        <li><a class="dropdown-item" href="/accounts/logout" >Logout</a></li>-->
+
+
+<!--   </ul>-->
+<!--  </div>-->
+<!--</div>-->
+{% load static %}
+<section id="admin-navbar">
+<div class="side-menu">
+    <div class="brand-name pt-3">
+        <h3 style="color:#fff;"><i class="fas fa-book-open"></i> Pick-a-book</h3>
+    </div>
+    <hr style="color:#999;">
+    <ul>
+        <li><a href="/admins/dashboard" style="color:#fff;"><i class="fa fa-home" aria-hidden="true"></i> <span>Dashboard</span></a></li>
+        <li><a href="/pickabook/get_category"><i class="fa fa-list-alt" aria-hidden="true"></i> <span>Genre</span></a></li>
+        <li><a href="/pickabook/get_books"><i class="fa fa-book" aria-hidden="true"></i><span> Books </span></a></li>
+        <li><a href="/pickabook/get_news"><i class="fas fa-book-reader"></i> <span>News & Interviews</span></a></li>
+        <li><a href="/news/get_article"><i class="far fa-question-circle"></i> <span>Quiz</span></a></li>
+        <li><a href="/pickabook/get_quote"><i class="fas fa-edit"></i> <span>Quotes</span></a></li>
+        <li><a href="/admins/users"><i class="fa fa-user" aria-hidden="true"></i><span> Users</span></a></li>
+        <li><a href="/admins/admins"><i class="fas fa-user-cog"></i><span> Admins</span></a></li>
+        <li><a href="/accounts/password_change"><i class="fa fa-wrench" aria-hidden="true"></i><span> Settings</span></a></li>
+        <li><a href="/accounts/logout"><i class="fa fa-sign-out" aria-hidden="true"></i><span> Logout</span></a></li>
+    </ul>
+</div>
+    <div class="navbar-container">
+        <div class="header">
+            <div class="nav">
+<!--                <div class="dashboard-header">-->
+<!--                    <h3>Dashboard</h3>-->
+<!--                </div>-->
+                <div class="search">
+                    <input type="text" placeholder="Search..">
+                    <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                </div>
+                <div class="user ms-5">
+                    <a href="#" class=" btn btn-primary ms-5">Add new</a>
+                    <div class="user-icon ms-3">
+                        <i class="fa fa-user-circle" aria-hidden="true"></i>
+                        <button type="button" class="btn mt-2 mx-4 " style="font-size:24px;"> {{user.username}}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+<!-- <div class="sidebar">-->
+<!--    <div class="logo-details">-->
+<!--      <i class='bx bxl-c-plus-plus'></i>-->
+<!--      <span class="logo_name">CodingLab</span>-->
+<!--    </div>-->
+<!--      <ul class="nav-links">-->
+<!--        <li>-->
+<!--          <a href="#" class="active">-->
+<!--            <i class='bx bx-grid-alt' ></i>-->
+<!--            <span class="links_name">Dashboard</span>-->
+<!--          </a>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--          <a href="#">-->
+<!--            <i class='bx bx-box' ></i>-->
+<!--            <span class="links_name">Product</span>-->
+<!--          </a>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--          <a href="#">-->
+<!--            <i class='bx bx-list-ul' ></i>-->
+<!--            <span class="links_name">Order list</span>-->
+<!--          </a>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--          <a href="#">-->
+<!--            <i class='bx bx-pie-chart-alt-2' ></i>-->
+<!--            <span class="links_name">Analytics</span>-->
+<!--          </a>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--          <a href="#">-->
+<!--            <i class='bx bx-coin-stack' ></i>-->
+<!--            <span class="links_name">Stock</span>-->
+<!--          </a>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--          <a href="#">-->
+<!--            <i class='bx bx-book-alt' ></i>-->
+<!--            <span class="links_name">Total order</span>-->
+<!--          </a>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--          <a href="#">-->
+<!--            <i class='bx bx-user' ></i>-->
+<!--            <span class="links_name">Team</span>-->
+<!--          </a>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--          <a href="#">-->
+<!--            <i class='bx bx-message' ></i>-->
+<!--            <span class="links_name">Messages</span>-->
+<!--          </a>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--          <a href="#">-->
+<!--            <i class='bx bx-heart' ></i>-->
+<!--            <span class="links_name">Favrorites</span>-->
+<!--          </a>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--          <a href="#">-->
+<!--            <i class='bx bx-cog' ></i>-->
+<!--            <span class="links_name">Setting</span>-->
+<!--          </a>-->
+<!--        </li>-->
+<!--        <li class="log_out">-->
+<!--          <a href="#">-->
+<!--            <i class='bx bx-log-out'></i>-->
+<!--            <span class="links_name">Log out</span>-->
+<!--          </a>-->
+<!--        </li>-->
+<!--      </ul>-->
+<!--  </div>-->
+<!--  <section class="home-section">-->
+<!--    <nav>-->
+<!--      <div class="sidebar-button">-->
+<!--        <i class='bx bx-menu sidebarBtn'></i>-->
+<!--        <span class="dashboard">Dashboard</span>-->
+<!--      </div>-->
+<!--      <div class="search-box">-->
+<!--        <input type="text" placeholder="Search...">-->
+<!--        <i class='bx bx-search' ></i>-->
+<!--      </div>-->
+<!--      <div class="profile-details">-->
+<!--        &lt;!&ndash;<img src="images/profile.jpg" alt="">&ndash;&gt;-->
+<!--        <span class="admin_name">Prem Shahi</span>-->
+<!--        <i class='bx bx-chevron-down' ></i>-->
+<!--      </div>-->
+<!--    </nav>-->
+
+
+<!--  </section>-->

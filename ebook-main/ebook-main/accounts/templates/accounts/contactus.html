@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+{% load bootstrap %}
+{% block title %}
+    <title>Contact Us</title>
+{% endblock%}
+
+{% block main_content %}
+
+<div class="container mt-5 pt-3">
+<div class="row mt-5">
+
+    <div class="col-md-6 offset-md-3">
+        <h1 class="text-center fw-bold">Contact Us</h1>
+          {% include 'messages.html'%}
+        <div class="card py-2 ps-5 m-4 bg-dark text-light">
+        <form class="form myForm" action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form | bootstrap_horizontal }}
+            <button type="submit" class="btn btn-primary bg-primary.bg-gradient mt-3">Submit</button>
+        </form>
+    </div>
+    </div>
+</div>
+</div>
+
+<script>
+    var form_fields = document.getElementsByTagName('input')
+    form_fields[2].placeholder = "Enter name"
+    form_fields[3].placeholder = "Enter phone"
+    form_fields[4].placeholder = "Enter email"
+    form_fields[5].placeholder = "Enter topic"
+    form_fields[6].placeholder = "Message us here......"
+
+
+
+   for(field in form_fields){
+   form_fields[field].className += ' my-3'
+   }
+</script>
+
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block title %}
+<title>Explore</title>
+{% endblock title %}
+
+{% block main_content %}
+<div class="arrow">
+  <a href=""><i class="fa fa-angle-up text-light" aria-hidden="true"></i></a>
+ <span class="arr">Go to top</span>
+</div>
+
+<nav aria-label="breadcrumb" class="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/homepage">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">All books</li>
+  </ol>
+</nav>
+<div class="container py-3">
+    <div class="row justify-content-around">
+        {% for i in book %}
+        <div class="row ">
+        <div class="best-books col-md-3 col-sm-3">
+          <div class="card" style="width: 16rem; ">
+            <div class="img">
+              <img src="/{{i.book_image}}" class="card-img-top" alt="...">
+            </div>
+            <div class="card-body">
+              <p class="card-title fw-bold fs-5">{{i.book_title}}</p>
+              <p class="card-text">authors name</p>
+
+            </div>
+            <div class="best-hover text-center">
+              <a href="/pickabook/book/{{i.id}}" class="pb-3 {{activate_book_detail}}">View Details <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+              <a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+              <a href="#" class="py-3">Download </a>
+            </div>
+          </div>
+
+        </div>
+
+    </div>
+        {% endfor %}
+         </div>
+    </div>
+</div>
+
+
+
+
+
+
+{% endblock main_content %}

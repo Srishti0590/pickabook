@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+{% block title %}
+<title>News & Interviews </title>
+{% endblock%}
+{% block main_content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-10 offset-md-1">
+            <h1 class="text-center">News and Interviews</h1>
+            {% include 'messages.html' %}
+            <div class="card py-2 px-2 m-5 shadow-lg">
+                <div class="card-body">
+                    {% for i in news %}
+                    <h1>{{ i.title }} </h1>
+                    <div class="img">
+                        <img src="/{{i.image}}" class="card-img-top" alt="...">
+                    </div>
+
+                        <h6> {{ i.description }}</h6>
+                    <h6> {{ i.created_date }} </h6>
+                </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

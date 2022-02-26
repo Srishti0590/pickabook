@@ -1,0 +1,77 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block title %}
+<title>Genres</title>
+{% endblock title %}
+
+{% block main_content %}
+<div class="arrow">
+  <a href=""><i class="fa fa-angle-up text-light" aria-hidden="true"></i></a>
+ <span class="arr">Go to top</span>
+</div>
+
+<nav aria-label="breadcrumb" class="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/homepage">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Genre</li>
+  </ol>
+</nav>
+<!--<div class="container">-->
+<!--    <div class="row justify-content-around">-->
+<!--        {% for i in categories %}-->
+<!--        <div class="card col-md-8 shadow m-3">-->
+
+<!--            <div class="card-body">-->
+<!--                <h1 class="card-title" style="color:orange">{{i.category_name}}</h1>-->
+<!--                <h4 class="card-text">{{i.category_description}}</h4>-->
+<!--                <a class="nav-link {{activate_book}} " href="/pickabook/books/{{i.id}}" style="font-size:20px;" >View Books</a>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        {% endfor %}-->
+<!--    </div>-->
+<!--</div>-->
+<!--    </div>-->
+
+<section id="art-design">
+  <div class="art">
+    <div class="container ">
+        {% for i in categories %}
+        <div class="title text-start ">
+            <h4 class="fs-1"><span>{{i.category_name}}</span></h4>
+              <a   href="/pickabook/books/{{i.id}}" class="fs-5 me-5 pt-3 view-all float-end {{activate_book}}">View all <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+        {% endfor %}
+
+        <div id="owl-demo3" class="owl-carousel owl-theme">
+            {% for i in category.books_set.all  %}
+            <div class="item">
+              <div class="img">
+                <img src="/{{i.book_image}}" class="card-img-top image_zoom" alt="..." >
+
+                <div class="best-click text-center ">
+                  <a href="#" class="pb-3">View Details <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                  <a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                  <a href="#" class="py-3">Download </a>
+
+              </div>
+            </div>
+                <div class="latest-content mt-2">
+                  <span class="author fs-6">John Strass</span><br>
+                  <span class=" book fs-5 fw-bold "> Summer Times Love Stories</span><br>
+                  <span class=" price fs-5">$20.00</span>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+
+    </div>
+  </div>
+  </section>
+
+
+
+
+
+{% endblock main_content %}
